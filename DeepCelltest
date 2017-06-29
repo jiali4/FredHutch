@@ -22,7 +22,9 @@ dil_radius = 1
 
 num_direcs = len(training_direcs)
 num_channels = len(channel_names)
-
+###Define window size
+window_size_x = image_size_x
+window_size_y = image_size_y
 
 imglist = []
 for direc in training_direcs:
@@ -41,9 +43,7 @@ direc_counter = 0
 for direc in training_direcs:
 	imglist = os.listdir(os.path.join(direc_name, direc))
 	channel_counter = 0
-###Define window size
-window_size_x = image_size_x
-window_size_y = image_size_y
+
 # Load channels
 	for channel in channel_names:
 		for img in imglist: 
