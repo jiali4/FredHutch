@@ -23,8 +23,8 @@ dil_radius = 1
 num_direcs = len(training_direcs)
 num_channels = len(channel_names)
 ###Define window size
-window_size_x = image_size_x
-window_size_y = image_size_y
+window_size_x = 500
+window_size_y = 500
 
 imglist = []
 for direc in training_direcs:
