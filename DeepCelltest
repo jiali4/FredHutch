@@ -30,7 +30,8 @@ for direc in training_direcs:
 # Load one file to get image sizes
 img_temp = get_image(os.path.join(direc_name,training_direcs[0],imglist[0]))
 image_size_x, image_size_y = img_temp.shape
-window_size_x, window_size_y = 15 #modified
+window_size_x = 15 #modified
+window_size_y = 15 #modified
 # Initialize arrays for the training images and the feature masks
 channels = np.zeros((num_direcs, num_channels, image_size_x, image_size_y), dtype='float32')
 feature_mask = np.zeros((num_direcs, num_of_features + 1, image_size_x, image_size_y))
