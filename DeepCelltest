@@ -93,7 +93,7 @@ for direc in training_direcs:
 	feature_mask[direc_counter,num_of_features,:,:] = 1 - feature_mask_sum
 
 	direc_counter += 1
-Plot the training data to double check that it's loaded. If you're running the script on a server, this part may need to be commented out in the make_training_data.py script.
+#Plot the training data to double check that it's loaded. If you're running the script on a server, this part may need to be commented out in the make_training_data.py script.
 In [7]:
 fig,ax = plt.subplots(len(training_direcs),num_of_features+1, squeeze = False)
 for j in xrange(len(training_direcs)):
