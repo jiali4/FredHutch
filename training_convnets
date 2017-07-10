@@ -11,11 +11,11 @@ import numpy as np
 batch_size = 256
 n_epoch = 25
 
-dataset = "3T3_all_61x61_HH"
+dataset = "3T3_all_61x61"
 expt = "bn_feature_net_61x61"
 
 direc_save = "/home/ubuntu/DeepCell/trained_networks/"
-direc_data = "/home/ubuntu/DeepCell/training_data_npz/"
+direc_data = "/home/ubuntu/DeepCell/training_data_npz/3T3"
 
 optimizer = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 lr_sched = rate_scheduler(lr = 0.01, decay = 0.95)
