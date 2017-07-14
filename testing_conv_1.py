@@ -1,6 +1,7 @@
 import h5py
 import tifffile as tiff
-from keras.backend.common import _UID_PREFIXES
+from keras import backend as K
+
 
 from cnn_functions import nikon_getfiles, get_image, run_models_on_directory, get_image_sizes, segment_nuclei, segment_cytoplasm, dice_jaccard_indices
 from model_zoo import sparse_bn_feature_net_61x61 as cyto_fn
