@@ -11,7 +11,7 @@ import numpy as np
 batch_size = 256
 n_epoch = 25
 
-dataset = "3T3_all_61x61_HZ"
+dataset = "3T3_all_61x61_HZ.npz"
 expt = "bn_feature_net_61x61"
 
 direc_save = "/home/ubuntu/DeepCell/trained_networks/"
