@@ -24,8 +24,7 @@ for iterate in xrange(5):
 
 	model = the_model(n_channels = 2, n_features = 3, reg = 1e-5)
 
-	train_model_sample(model = model, da
-		taset = dataset, optimizer = optimizer, 
+	train_model_sample(model = model, dataset = dataset, optimizer = optimizer, 
 		expt = expt, it = iterate, batch_size = batch_size, n_epoch = n_epoch,
 		direc_save = direc_save, 
 		direc_data = direc_data, 
