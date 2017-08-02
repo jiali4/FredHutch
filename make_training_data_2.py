@@ -118,30 +118,6 @@ for direc in training_direcs:
 
 	direc_counter += 1
 
-
-#Plot segementation results
-
-fig,ax = plt.subplots(len(training_direcs),num_of_features+2, squeeze = False)
-print ax.shape
-for j in xrange(len(training_direcs)):
-	ax[j,0].imshow(channels[j,0,:,:],cmap=plt.cm.gray,interpolation='nearest')
-	def form_coord(x,y):
-		return cf(x,y,channels[j,0,:,:])
-	ax[j,0].format_coord = form_coord
-	ax[j,0].axes.get_xaxis().set_visible(False)
-	ax[j,0].axes.get_yaxis().set_visible(False)
-
-	for k in xrange(1,num_of_features+2):
-		ax[j,k].imshow(feature_mask[j,k-1,:,:],cmap=plt.cm.gray,interpolation='nearest')
-		def form_coord(x,y):
-			return cf(x,y,feature_mask[j,k-1,:,:])
-		ax[j,k].format_coord = form_coord
-		ax[j,k].axes.get_xaxis().set_visible(False)
-		ax[j,k].axes.get_yaxis().set_visible(False)
-
-plt.show()
-
-
 """
 Select points for training data
 """
