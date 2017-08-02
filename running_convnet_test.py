@@ -1,6 +1,5 @@
 import h5py
 import tifffile as tiff
-from keras import backend as K
 from keras.backend.common import _UID_PREFIXES
 
 from cnn_functions import nikon_getfiles, get_image, run_models_on_directory, get_image_sizes, segment_nuclei, segment_cytoplasm, dice_jaccard_indices
@@ -10,7 +9,7 @@ from model_zoo import sparse_bn_feature_net_61x61 as nuclear_fn
 import os
 import numpy as np
 
-direc_name = '/home/ubuntu/DeepCell/validation_data/HeLa'
+direc_name = '/home/vanvalen/DeepCell2/validation_data/HeLa/'
 data_location = os.path.join(direc_name, 'RawImages')
 
 cyto_location = os.path.join(direc_name, 'Cytoplasm')
@@ -20,10 +19,10 @@ mask_location = os.path.join(direc_name, 'Masks')
 cyto_channel_names = ['phase', 'farred']
 nuclear_channel_names = ['farred']
 
-trained_network_cyto_directory = "/home/ubuntu/DeepCell/trained_networks/HeLa"
-trained_network_nuclear_directory = "/home/ubuntu/DeepCell/trained_networks/Nuclear"
+trained_network_cyto_directory = "/home/vanvalen/DeepCell2/trained_networks/HeLa/"
+trained_network_nuclear_directory = "/home/vanvalen/DeepCell2/trained_networks/Nuclear"
 
-cyto_prefix = "2017-06-21_HeLa_all_61x61_bn_feature_net_61x61_"
+cyto_prefix = "2016-07-12_HeLa_all_61x61_bn_feature_net_61x61_"
 nuclear_prefix = "2016-07-12_nuclei_all_61x61_bn_feature_net_61x61_"
 
 win_cyto = 30
