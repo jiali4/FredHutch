@@ -17,11 +17,11 @@ import numpy as np
 batch_size = 256
 n_epoch = 25
 
-dataset = "MCF10A_61x61"
+dataset = "HeLa_all_61x61_HH"
 expt = "bn_feature_net_61x61"
 
 direc_save = "/home/ubuntu/DeepCell/trained_networks/"
-direc_data = "/home/ubuntu/DeepCell/training_data_npz/MCF10A"
+direc_data = "/home/ubuntu/DeepCell/training_data_npz/HeLa"
 
 optimizer = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 lr_sched = rate_scheduler(lr = 0.01, decay = 0.95)
