@@ -29,7 +29,7 @@ class_weight = {0:1, 1:1, 2:1}
 
 for iterate in xrange(5):
 
-	model = the_model(n_channels = 5, n_features = 3, reg = 1e-5)
+	model = the_model(n_channels = 2, n_features = 3, reg = 1e-5)
 
 	train_model_sample(model = model, dataset = dataset, optimizer = optimizer, 
 		expt = expt, it = iterate, batch_size = batch_size, n_epoch = n_epoch,
